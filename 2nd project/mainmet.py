@@ -12,9 +12,9 @@ def word_finder(url):
 		for each_word in words:
 			prin(each_word)
 			word_list.append(each_word)
-	#clean_list(word_list)
+	clean_list(word_list)
 
-'''def clean_list(word_list):
+def clean_list(word_list):
 	clean_word_list = []
 	for word in word_list:
 		if word[-1] is "," or "\"" or "(" or ")" or "?":
@@ -29,9 +29,9 @@ def word_finder(url):
 			word = word.replace("(","")
 		print (word)
 		clean_word_list.append(word)
-	create_dictionary(clean_word_list)'''
+	create_dictionary(clean_word_list)
 
-'''def create_dictionary(clean_word_list):
+def create_dictionary(clean_word_list):
 	word_count = {}
 	for word in clean_word_list:
 		if word in word_count:
@@ -40,15 +40,15 @@ def word_finder(url):
 			word_count[word] = 1
 	for key, value in sorted(word_count.items() , key = operator.itemgetter(1)):
 		print (key,value)
-	text_maker(word_count)'''
+	text_maker(word_count)
 
 
 
-'''def text_maker(word_count,url):
+def text_maker(word_count,url):
 	fw = open(str(url[27:-5]) + ".txt" , 'w')
 	for k,v in word_count.items():
 		fw.write(k,'',v,'\n')
-	fw.close()'''
+	fw.close()
 
 
 url = 'http://www.metrolyrics.com/stressed-out-lyrics-twenty-one-pilots.html'
